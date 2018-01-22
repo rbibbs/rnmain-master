@@ -45,5 +45,12 @@ pCat.nextLower = function(cat) {
 		throw new Error(cat + ' is not a prosodic category');
 	return pCat[i+1];
 }
+// Function that returns the prosodic category that is one level higher than the given category
+pCat.nextHigher = function(cat) {
+	var i = pCat.indexOf(cat);
+	if (i < 0)
+		throw new Error(cat + ' is not a prosodic category');
+	return pCat[i-1];
+}
 //pCat(type1).isHigherThan(type2)
 
